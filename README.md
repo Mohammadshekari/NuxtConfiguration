@@ -122,7 +122,23 @@ export default defineAppConfig({
     ui: {
         primary: 'cyan',
         gray: 'cool',
+        button: { // Change All Button classes and defaults
+            rounded: 'rounded-full'
+        }
     }
 })
 ```
+
+for Change Theme Mode (Light/Dark) you can add `colorMode` to `nuxt.config.ts` like this:
+```js
+export default defineNuxtConfig({
+  ...
+  colorMode: {
+    preference: 'dark' 
+  },
+  ...
+})
+```
+your Default color theme mode will save in your localStorage like this `nuxt-color-mode: "dark"` and you must delete it to see changes.
+
 
