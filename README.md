@@ -31,8 +31,43 @@ project:
   |- assets
   |- components
   |- composables
+  |- layouts
+  |- middleware
   |- pages
   |- plugins
   |- types
 ```
+
+---
+# Add NuxtUI
+
+Install nuxtui on the project:
+```sh
+npx nuxi@latest module add ui
+```
+it will add `'@nuxt/ui'` to `nuxt.config.ts` modules list.
+
+create tailwind file in project folder `tailwind.config.js` with this content:
+```js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+    content: [
+        "./index.html",
+        "./**/*.{vue,js,ts}"
+    ],
+    theme: {
+        extend: {},
+    },
+    plugins: [],
+}
+```
+it will recognize css classes.
+
+then create css file `assets/css/tailwind.css` with this content:
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+to import default tailwind css codes.
 
